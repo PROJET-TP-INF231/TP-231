@@ -1,64 +1,40 @@
-# Makefile pour le devoir de Structures de Données II
+# 🔢 Algorithmes en C – Tableaux et Matrices
 
-# Auteur: Groupe de TP - 6 membres
+Ce projet contient plusieurs programmes en langage **C** qui implémentent des algorithmes classiques sur les **tableaux** et les **matrices**.
 
-CC = gcc
-CFLAGS = -Wall -Wextra -std=c99 -g
-RM = rm -f
+## 📁 Contenu du projet
 
-# Dossiers des exercices
+| Fichier | Description |
+|--------|-------------|
+| `somme_matrices.c` | Addition de deux matrices |
+| `produit_matrices.c` | Multiplication de deux matrices |
+| `recherche_sequentielle.c` | Recherche d’un élément dans un tableau (recherche séquentielle) |
+| `test_tableau_trie.c` | Vérifie si un tableau est trié dans l’ordre croissant |
+| `mediane_tableau.c` | Calcule la médiane d’un tableau |
+| `inverser_tableau.c` | Inverse les éléments d’un tableau |
+| `produit_vectoriel.c` | Calcule le produit vectoriel de deux vecteurs 3D |
+| `vecteur_matrice.c` | Calcule le produit d’un vecteur ligne par une matrice |
 
-DIRS = 1.somme_matrices 2.produit_matrices 3.recherche_sequentielle 4.multiplication_addition \
- 5.tableau_trie 6.mediane 7.inverser_tableau 8.produit_vectoriel 9.produit_vecteur_matrice
+## 🛠️ Compilation
 
-# Règle par défaut
+Pour compiler un fichier source, utilisez `gcc` :
 
-all: $(DIRS)
+```bash
+gcc -o programme nom_du_fichier.c
+./programme
+Par exemple, pour compiler et exécuter le programme de somme de matrices:
+gcc -o somme somme_matrices.c
+./somme
+Exemple d’exécution:
+=== Somme de Matrices ===
+Entrez les dimensions (lignes colonnes): 2 2
+Entrez les éléments de la première matrice:
+1 2
+3 4
+Entrez les éléments de la deuxième matrice:
+5 6
+7 8
 
-# Compilation de chaque exercice
-
-1.somme_matrices:
-@echo "Compilation de l'exercice 1: Somme de matrices"
-$(CC) $(CFLAGS) -o $@/main $@/main.c $@/somme_matrices.c
-
-2.produit_matrices:
-@echo "Compilation de l'exercice 2: Produit de matrices"
-$(CC) $(CFLAGS) -o $@/main $@/main.c $@/produit_matrices.c
-
-3.recherche_sequentielle:
-@echo "Compilation de l'exercice 3: Recherche séquentielle"
-$(CC) $(CFLAGS) -o $@/main $@/main.c $@/recherche_sequentielle.c
-
-4.multiplication_addition:
-@echo "Compilation de l'exercice 4: Multiplication par addition"
-$(CC) $(CFLAGS) -o $@/main $@/main.c $@/multiplication_addition.c
-
-5.tableau_trie:
-@echo "Compilation de l'exercice 5: Tableau trié"
-$(CC) $(CFLAGS) -o $@/main $@/main.c $@/tableau_trie.c
-
-6.mediane:
-@echo "Compilation de l'exercice 6: Médiane"
-$(CC) $(CFLAGS) -o $@/main $@/main.c $@/mediane.c
-
-7.inverser_tableau:
-@echo "Compilation de l'exercice 7: Inverser tableau"
-$(CC) $(CFLAGS) -o $@/main $@/main.c $@/inverser_tableau.c
-
-8.produit_vectoriel:
-@echo "Compilation de l'exercice 8: Produit vectoriel"
-$(CC) $(CFLAGS) -o $@/main $@/main.c $@/produit_vectoriel.c -lm
-
-9.produit_vecteur_matrice:
-@echo "Compilation de l'exercice 9: Produit vecteur × matrice"
-$(CC) $(CFLAGS) -o $@/main $@/main.c $@/produit_vecteur_matrice.c
-
-# Nettoyage
-
-clean:
-@echo "Nettoyage des fichiers exécutables"
-@for dir in $(DIRS); do \
-		$(RM) $$dir/main; \
- done
-
-# Test de tous les exercices
+Résultat:
+6 8
+10 12
