@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "matrices_somme.h"
+#include "somme_matrices.h"
 
 void lireMatrice(int matrice[10][10], int lignes, int colonnes) {
     int i, j;
@@ -28,3 +28,4 @@ void afficherMatrice(int matrice[10][10], int lignes, int colonnes) {
         printf("\n");
     }
 }
+
