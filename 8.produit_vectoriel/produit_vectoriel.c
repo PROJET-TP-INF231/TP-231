@@ -46,7 +46,7 @@ void saisir_vecteur(Vecteur *v) {
     
     if (v->taille > MAX_TAILLE) {
         printf("Taille trop grande, limitée à %d\n", MAX_TAILLE);
-        v->taille = MAX_TAILLE;
+        v-> taille = MAX_TAILLE ;
     }
     
     if (v->taille <= 0) {
