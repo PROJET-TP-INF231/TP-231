@@ -3,20 +3,22 @@
 
 #define MAX_TAILLE 10
 
-// Structure pour représenter un vecteur
-typedef struct {
+// la structure pour représenter un vecteur
+typedef struct
+{
     int taille;
     double elements[MAX_TAILLE];
 } Vecteur;
 
-// Structure pour représenter une matrice
-typedef struct {
+// mes structure pour représenter une matrice
+typedef struct
+{
     int lignes;
     int colonnes;
     double matrice[MAX_TAILLE][MAX_TAILLE];
 } Matrice;
 
-// Prototypes des fonctions
+// voici mes prototypes des fonctions
 void saisir_vecteur(Vecteur *v);
 void afficher_vecteur(const Vecteur *v, const char *nom);
 void saisir_matrice(Matrice *m, int lignes, int colonnes);

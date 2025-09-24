@@ -1,8 +1,9 @@
+
 #include <stdio.h>
 #include <math.h>
 #include "produit_vectoriel.h"
 
-//FONCTIONS POUR VECTEURS 3D//
+// === FONCTIONS POUR VECTEURS 3D ===//
 
 // Fonction pour saisir un vecteur 3D
 void saisir_vecteur3d(Vecteur3D *v, const char *nom) {
@@ -88,7 +89,7 @@ double produit_scalaire(const Vecteur *v1, const Vecteur *v2) {
     return resultat;
 }
 
-// // FONCTIONS POUR MATRICES 
+// === FONCTIONS POUR MATRICES ===
 
 // Fonction pour saisir une matrice
 void saisir_matrice(Matrice *m, int lignes, int colonnes) {
@@ -122,17 +123,17 @@ int compatible_vecteur_matrice(const Vecteur *v, const Matrice *m) {
     return (v->taille == m->lignes);
 }
 
-// ma fonction pour calculer le produit vecteur × matrice
+// Fonction pour calculer le produit vecteur × matrice
 Vecteur produit_vecteur_matrice(const Vecteur *v, const Matrice *m) {
     Vecteur resultat;
     resultat.taille = m->colonnes;
     
-    // j'nitialiser le résultat à 0
+    // Initialiser le résultat à 0
     for (int j = 0; j < m->colonnes; j++) {
         resultat.elements[j] = 0.0;
     }
     
-    // je cherche a calculer le produit : vecteur ligne × matrice
+    // Calculer le produit : vecteur ligne × matrice
     for (int j = 0; j < m->colonnes; j++) {
         for (int i = 0; i < v->taille; i++) {
             resultat.elements[j] += v->elements[i] * m->matrice[i][j];

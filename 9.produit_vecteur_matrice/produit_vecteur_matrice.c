@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "produit_vecteur_matrice.h"
 
-// ma fonction pour saisir un vecteur
+// Fonction pour saisir un vecteur
 void saisir_vecteur(Vecteur *v)
 {
     printf("Entrez la taille du vecteur (max %d) : ", MAX_TAILLE);
@@ -81,13 +81,13 @@ int compatible_vecteur_matrice(const Vecteur *v, const Matrice *m)
     return (v->taille == m->lignes);
 }
 
-// Fonction pour calculer le produit vecteur × matrice
+// la fonction pour calculer le produit vecteur × matrice
 Vecteur produit_vecteur_matrice(const Vecteur *v, const Matrice *m)
 {
     Vecteur resultat;
     resultat.taille = m->colonnes;
 
-    // Initialiser le résultat à 0
+    // initialiser le résultat à 0
     for (int j = 0; j < m->colonnes; j++)
     {
         resultat.elements[j] = 0.0;
@@ -106,7 +106,7 @@ Vecteur produit_vecteur_matrice(const Vecteur *v, const Matrice *m)
     return resultat;
 }
 
-// voici ma fonction pour montrer des exemples automatiques
+// Fonction pour montrer des exemples automatiques
 void exemples_automatiques(void)
 {
     printf("=== EXEMPLES AUTOMATIQUES ===\n\n");
