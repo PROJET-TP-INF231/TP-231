@@ -1,31 +1,23 @@
 #include <stdio.h>
 #include "somme_matrices.h"
 
-void lireMatrice(int matrice[10][10], int lignes, int colonnes) {
-    int i, j;
-    for (i = 0; i < lignes; i++) {
-        for (j = 0; j < colonnes; j++) {
-            scanf("%d", &matrice[i][j]);
-        }
-    }
-}
+int main() {
+    int lignes, colonnes;
+    int matrice1[10][10], matrice2[10][10], somme[10][10];
 
-void additionnerMatrices(int matrice1[10][10], int matrice2[10][10], int resultat[10][10], int lignes, int colonnes) {
-    int i, j;
-    for (i = 0; i < lignes; i++) {
-        for (j = 0; j < colonnes; j++) {
-            resultat[i][j] = matrice1[i][j] + matrice2[i][j];
-        }
-    }
-}
+    printf("Entrez le nombre de lignes et de colonnes des matrices: ");
+    scanf("%d %d", &lignes, &colonnes);
 
-void afficherMatrice(int matrice[10][10], int lignes, int colonnes) {
-    int i, j;
-    for (i = 0; i < lignes; i++) {
-        for (j = 0; j < colonnes; j++) {
-            printf("%d ", matrice[i][j]);
-        }
-        printf("\n");
-    }
-}
+    printf("Entrez les elements de la premiere matrice:\n");
+    lireMatrice(matrice1, lignes, colonnes);
 
+    printf("Entrez les elements de la deuxieme matrice:\n");
+    lireMatrice(matrice2, lignes, colonnes);
+
+    additionnerMatrices(matrice1, matrice2, somme, lignes, colonnes);
+
+    printf("La somme des deux matrices est:\n");
+    afficherMatrice(somme, lignes, colonnes);
+
+    return 0;
+}
