@@ -2,7 +2,7 @@
 #include <math.h>
 #include "produit_vectoriel.h"
 
-//FONCTIONS POUR VECTEURS 3D
+//FONCTIONS POUR VECTEURS 3D//
 
 // Fonction pour saisir un vecteur 3D
 void saisir_vecteur3d(Vecteur3D *v, const char *nom) {
@@ -16,7 +16,7 @@ void saisir_vecteur3d(Vecteur3D *v, const char *nom) {
 }
 
 // Fonction pour afficher un vecteur 3D
-void afficher_vecteur3d(const Vecteur3D *v, const char *nom) {
+void afficher_vecteur3d(const Vecteur3D *v, const char *nom) { 
     printf("Vecteur %s = (%.2f, %.2f, %.2f)\n", nom, v->x, v->y, v->z);
 }
 
