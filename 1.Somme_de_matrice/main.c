@@ -3,7 +3,12 @@
 
 int main() {
     int lignes, colonnes;
-    int matrice1[10][10], matrice2[10][10], somme[10][10];
+    int n;
+    int b;
+    printf("entrez les dimmension de la matrice");
+    scanf("%d",&n);
+    scanf("%d",&b);
+    int matrice1[][], matrice2[][], somme[][];
 
     printf("Entrez le nombre de lignes et de colonnes des matrices: ");
     scanf("%d %d", &lignes, &colonnes);
@@ -21,3 +26,4 @@ int main() {
 
     return 0;
 }
+
