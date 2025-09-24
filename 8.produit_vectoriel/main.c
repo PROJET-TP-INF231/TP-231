@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include "produit_vectoriel.h"
 
-void menu_principal(void);
+void  menu_principal(void);
 void test_produit_vectoriel_3d(void);
-void test_produit_scalaire(void);
+void    test_produit_scalaire(void);
 void test_produit_vecteur_matrice(void);
 void exemples_automatiques(void);
 
